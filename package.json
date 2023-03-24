@@ -1,0 +1,34 @@
+{
+  "name": "book-store",
+  "version": "1.0.0",
+  "description": "As Ecommerce shoppers, we want to purchase and review books. We would like to be able to read and write reviews on books intended for purchase. We would like to be able to select books to be added to a wishlist or to a cart for purchase using stripe",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/helenhosse/book-store.git"
+  },
+  "keywords": [
+    "react",
+    "bcrypt",
+    "node.js",
+    "mongoose",
+    "graphQl",
+    "express"
+  ],
+  "author": "Helen Hosse, John Dean, Sarah DeSantis, Jacob Yaws, and Scott St. John",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/helenhosse/book-store/issues"
+  },
+  "homepage": "https://github.com/helenhosse/book-store#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "dotenv": "^16.0.3",
+    "node": "^19.8.1",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2"
+  }
+}
