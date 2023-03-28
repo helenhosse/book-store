@@ -1,12 +1,12 @@
 import React from 'react';
-import NavBar from '../pages/NavBar';
+import NavBar from './NavBar';
 
 const HomePage = () => {
   return (
     <div>
       <NavBar />
-      <h1 className='title-logo'>A Novel Idea</h1>
-      <p>We like big books and we cannot lie!</p>
+      <h1>Home Page</h1>
+      <p>Welcome to the home page!</p>
     </div>
   );
 };
