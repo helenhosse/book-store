@@ -3,9 +3,9 @@ import { useQuery } from '@apollo/client';
 
 import BookItem from '../BookItem';
 import { useStoreContext } from '../../utils/GlobalState';
-import { UPDATE_PRODUCTS } from '../../utils/actions';
-import { QUERY_PRODUCTS } from '../../utils/queries';
-import spinner from '../../assets/spinner.gif';
+import { UPDATE_BOOKS } from '../../utils/actions';
+import { QUERY_BOOKS } from '../../utils/queries';
+// import spinner from '../../assets/spinner.gif';
 
 function BookList() {
   const [state, dispatch] = useStoreContext();
@@ -52,7 +52,7 @@ function BookList() {
       ) : (
         <h3>You haven't added any books yet!</h3>
       )}
-      {loading ? <img src={spinner} alt="loading" /> : null}
+      {/* {loading ? <img src={spinner} alt="loading" /> : null} */}
     </div>
   );
 }
