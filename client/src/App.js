@@ -13,7 +13,7 @@ import AboutUs from './pages/AboutUs';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-// import Nav from './components/Nav';
+import Nav from './components/Nav';
 import Events from './pages/Events';
 import { StoreProvider } from './utils/GlobalState';
 // import OrderHistory from './pages/OrderHistory';
@@ -43,7 +43,7 @@ function App() {
       <Router>
         <div>
           <StoreProvider>
-            {/* <Nav /> */}
+            <Nav />
             <Routes>
               <Route 
                 path="/" 

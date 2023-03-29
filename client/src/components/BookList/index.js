@@ -35,7 +35,7 @@ function BookList() {
 
   return (
     <div className="my-2">
-      <h2>Our Books:</h2>
+      <h2>Book List:</h2>
       {state.books.length ? (
         <div className="flex-row">
           {filterBooks().map((book) => (
@@ -50,7 +50,7 @@ function BookList() {
           ))}
         </div>
       ) : (
-        <h3>You haven't added any books yet!</h3>
+        <h3>You don't have any books saved yet!</h3>
       )}
       {/* {loading ? <img src={spinner} alt="loading" /> : null} */}
     </div>
