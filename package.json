@@ -2,8 +2,10 @@
   "name": "book-store",
   "version": "1.0.0",
   "description": "As Ecommerce shoppers, we want to purchase and review books. We would like to be able to read and write reviews on books intended for purchase. We would like to be able to select books to be added to a wishlist or to a cart for purchase using stripe",
-  "main": "server.js",
   "scripts": {
+    "start": "node server.js/",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i && cd ../client && npm i",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,16 +26,7 @@
     "url": "https://github.com/helenhosse/book-store/issues"
   },
   "homepage": "https://github.com/helenhosse/book-store#readme",
-  "dependencies": {
-    "apollo-server-express": "^3.12.0",
-    "bootstrap": "^5.2.3",
-    "dotenv": "^16.0.3",
-    "express-async-handler": "^1.2.0",
-    "graphql": "^16.6.0",
-    "mongoose": "^7.0.3",
-    "node": "^19.8.1",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.7.2",
-    "stripe": "^11.16.0"
+  "devDependencies": {
+    "concurrently": "^8.0.1"
   }
 }
