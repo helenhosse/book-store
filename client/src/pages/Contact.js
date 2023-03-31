@@ -1,7 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 
-const HomePage = () => {
+const Contact = () => {
   return (
     <div>
       <NavBar />
@@ -11,6 +11,6 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+// export default HomePage;
 
-// export default Contact;
+export default Contact;
