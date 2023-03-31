@@ -5,8 +5,8 @@ const HomePage = () => {
   return (
     <div>
       <NavBar />
-      <h1>Home Page</h1>
-      <p>Welcome to the home page!</p>
+      <h1 className='title-logo'>A Novel Idea</h1>
+      <p>We like big books and we cannot lie!</p>
     </div>
   );
 };
