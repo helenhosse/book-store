@@ -39,10 +39,11 @@ app.get('/', (req, res) => {
 });
 */
 
-const startApolloServer = async (typeDefs, resolvers) => {
-  await server.start();
-  server.applyMiddleware({ app });
 
+// need to add apolloserver, middleware and static assets once made and graphQL
+async function startApolloServer(typeDefs, resolvers){
+  await server.start()
+  server.applyMiddleware({app})
   db.once('open', () => {
     app.listen(PORT, () => {
       console.log(`API server running on port ${PORT}!`);
@@ -50,6 +51,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
     });
   });
 };
+
 
 startApolloServer(typeDefs, resolvers);
 
