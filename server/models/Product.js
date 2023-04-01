@@ -3,35 +3,35 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const productSchema = new Schema({
-    name: {
+    title: {
         type: String,
         required: true,
         trim: true
     },
     author: {
-        type: String
+        type: String,
+        required: true
     },
-    description: {
+    firstSentence: {
         type: String
     },
     image: {
-        type: String
+        type: String,
+        required: true
     },
     price: {
         type: Number,
-        required: true,
-        min: 0.25
+        default: 1
     },
     quantity: {
         type: Number,
-        min: 0,
-        default: 0
+        min: 1,
     },
-    category: {
-        type: Schema.Types.ObjectId,
-        ref: 'Category',
-        required: true
+    year: {
+        type: Number,
+        required: true,
     }
+    
 });
 
 const Product = mongoose.model('Product', productSchema);
