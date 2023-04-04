@@ -40,26 +40,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
        </Routes>
-      {/* <nav>
-        <ul>
-          <li>
-            <button onClick={() => setActivePage("Home")}>Home</button>
-          </li>
-          <li>
-            <button onClick={() => setActivePage("About")}>About</button>
-          </li>
-          <li>
-            <button onClick={() => setActivePage("Contact")}>Contact</button>
-          </li>
-          <li>
-            <button onClick={() => setActivePage("Events")}>Events</button>
-          </li>
-          <li>
-            <button onClick={() => setActivePage("Shop")}>Shop</button>
-          </li>
-        </ul>
-      </nav>
-      {displayPage()} */}
     </div>
   );
 }

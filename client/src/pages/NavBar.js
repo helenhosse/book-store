@@ -1,12 +1,21 @@
 import { CalendarOutlined, TeamOutlined, ShoppingCartOutlined, PhoneOutlined } from '@ant-design/icons';
-import { Input, Space, Menu, Image, Col } from 'antd';
+import { Input, Menu, Image,} from 'antd';
 import { useState } from 'react';
 import Logo from "../images/owlsch.png"
 
 const items = [
   {
     label: (
-      <a href="/about" target="_blank" rel="noopener noreferrer">
+      <a href="/" rel="noopener noreferrer">
+       📖 A Novel Idea
+      </a>
+      
+    ),
+    key: 'home',
+  },
+  {
+    label: (
+      <a href="/about" hover="none" rel="noopener noreferrer">
         About Us
       </a>
     ),
@@ -15,7 +24,7 @@ const items = [
   },
   {
     label: (
-      <a href="/events" target="_blank" rel="noopener noreferrer">
+      <a href="/events" rel="noopener noreferrer">
         Events
       </a>
     ),
@@ -33,14 +42,14 @@ const items = [
         children: [
           {
             label: (
-              <a href="/shop" target="_blank" rel="noopener noreferrer">
+              <a href="/shop" rel="noopener noreferrer">
                 Go to Shop
               </a>
             )
           },
           {
             label: (
-              <a /*href=""*/ target="_blank" rel="noopener noreferrer">
+              <a /*href=""*/ rel="noopener noreferrer">
                 View Cart
               </a>
             ),
@@ -53,7 +62,7 @@ const items = [
   },
   {
     label: (
-      <a href="/contact" target="_blank" rel="noopener noreferrer">
+      <a href="/contact" rel="noopener noreferrer">
         Contact Us
       </a>
     ),
@@ -61,7 +70,7 @@ const items = [
     icon: <PhoneOutlined />
   },
   {
-    icon: <a href="/" target="_blank" rel="noopener noreferrer">
+    icon: <a href="/" rel="noopener noreferrer">
       <Image
     width={80}
     src={Logo}
@@ -93,7 +102,7 @@ const items = [
 {/* <Input placeholder="Basic usage" /> */}
 const onSearch = (value) => console.log(value);
 const NavBar = () => {
-  const [current, setCurrent] = useState('about');
+  const [current, setCurrent] = useState('');
   const onClick = (e) => {
     // console.log('click ', e);
     setCurrent(e.key);
