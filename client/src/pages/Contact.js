@@ -41,5 +41,3 @@ function ContactFormPage() {
 }
 
 export default ContactFormPage;
-
-export default Contact;

@@ -11,13 +11,11 @@ const typeDefs = gql`
     price: Float
     year: Int
   }
-
   type Order {
     _id: ID
     purchaseDate: String
     products: [Product]
   }
-
   type User {
     _id: ID
     firstName: String
@@ -25,16 +23,13 @@ const typeDefs = gql`
     email: String
     orders: [Order]
   }
-
  # type Checkout {
   #  session: ID
   #}
-
   type Auth {
     token: ID
     user: User
   }
-
   type Query {
     # products(title: String): [Product]
     products: [Product]
@@ -43,7 +38,6 @@ const typeDefs = gql`
     order(_id: ID!): Order
     # checkout(products: [ID]!): Checkout
   }
-
   type Mutation {
     addUser(
       firstName: String!
@@ -69,4 +63,3 @@ const typeDefs = gql`
 
 
   module.exports = typeDefs;
-
