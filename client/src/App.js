@@ -6,6 +6,8 @@ import Contact from "./pages/Contact";
 import Events from "./pages/Events";
 import Shop from "./pages/Shop";
 import NavBar from './pages/NavBar';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 function App() {
 //   // const [activePage, setActivePage] = useState("Home");
@@ -35,6 +37,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
        </Routes>
       {/* <nav>
         <ul>
