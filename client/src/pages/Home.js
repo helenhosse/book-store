@@ -7,14 +7,14 @@ import { Divider } from "antd"
 
 const HomePage = () => {
   return (
-    <div>
+    <div style={{ maxWidth: '75%', margin: '0 12% 0 12%'}}>
       <ImageCarousel />
       <Divider type="vertical" />
-      <div>{<About />}</div>
+      <div class="homeBody">{<About />}</div>
       <Divider type="vertical" />
-      <div>{<Events />}</div>
+      <div class="homeBody">{<Events />}</div>
       <Divider type="vertical" />
-      <div>{<Contact />}</div> 
+      <div class="homeBody">{<Contact />}</div> 
       <Divider type="vertical" />  
     </div>
   );

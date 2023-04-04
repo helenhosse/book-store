@@ -16,8 +16,7 @@ const ContactFormPage = () => (
     }}
     style={{
       maxWidth: '50%',
-      textAlign: 'center',
-      alignSelf: 'center',
+      margin: '5% 15% 0 15%'
     }}
     initialValues={{
       remember: true,
