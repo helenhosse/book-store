@@ -1,20 +1,15 @@
 import React from "react";
-import NavBar from "./NavBar";
-import React from "react";
 import BookCard from "./BookCard";
 
-function Shop(props) {
-  const HomePage = () => {
-    return (
-      <div>
-        <NavBar />
-        <h1 className="title-logo">A Novel Idea</h1>
-        <p>We like big books and we cannot lie!</p>
-      </div>
-    );
-  };
+function Shop(props) 
+  // {const HomePage = () => {
+  //   return (
+  //     <div> 
+  //     </div>
+  //   );
+  // };
 
-  const books = [
+{const books = [
     {
       id: 1,
       title: "Book Title",
@@ -27,8 +22,8 @@ function Shop(props) {
   ];
 
   return (
-    <div className="book-shop">
-      <h1>Welcome to My Book Shop</h1>
+    <div className="search-results">
+      <h1>Search Results</h1>
       <div className="book-list">
         {books.map((book) => (
           <BookCard
