@@ -1,5 +1,5 @@
 import { CalendarOutlined, TeamOutlined, ShoppingCartOutlined, PhoneOutlined } from '@ant-design/icons';
-import { Input, Space, Menu, Image } from 'antd';
+import { Input, Space, Menu, Image, Col } from 'antd';
 import { useState } from 'react';
 import Logo from "../images/owlsch.png"
 
@@ -98,6 +98,6 @@ const NavBar = () => {
     // console.log('click ', e);
     setCurrent(e.key);
   };
-  return <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
+  return <Menu style={{ width: '100%', justifyContent: 'center' }} onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
 };
 export default NavBar;
