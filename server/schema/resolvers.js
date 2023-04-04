@@ -6,21 +6,21 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
     Query: {
         // maybe switch products to title
-        products: async (parent, { category, name }) => {
+        products: async (parent, { title }) => {
             const params = {};
       
-            if (category) {
-              params.category = category;
-            }
+            // if (category) {
+            //   params.category = category;
+            // }
       
-            if (name) {
-              params.name = {
-                $regex: name
-              };
-            }
-      
-            return await Product.find(params).populate('category');
-          },
+            // if (title) {
+            //   params.title = {
+            //     $regex: title
+            //   };
+            // }
+
+            return await Product.find();
+                },
         product: async (parent, { _id }) => {
             return await Product.findById(_id).populate('products');
         },
