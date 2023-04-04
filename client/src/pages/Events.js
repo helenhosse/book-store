@@ -1,16 +1,21 @@
 import React from 'react';
-import NavBar from './NavBar';
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
 
-const HomePage = () => {
+const events = [
+  { title: 'Event 1', date: '2023-04-05' },
+  { title: 'Event 2', date: '2023-04-08' },
+  { title: 'Event 3', date: '2023-04-10' },
+];
+
+const Calendar = () => {
   return (
-    <div>
-      <NavBar />
-      <h1 className='title-logo'>A Novel Idea</h1>
-      <p>We like big books and we cannot lie!</p>
-    </div>
+    <FullCalendar
+      plugins={[dayGridPlugin]}
+      initialView="dayGridMonth"
+      events={events}
+    />
   );
 };
 
-export default HomePage;
-
-// export default Events;
+export default Calendar;

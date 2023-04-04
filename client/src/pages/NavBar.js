@@ -1,9 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import Logo from "../images/owlsch.png";
 
 const NavBar = () => {
   return (
-    <nav className='navbar'>
+    <nav className="navbar">
+      <h1 className="title-logo">
+        A Novel Idea
+        <img src={Logo} />
+      </h1>
+      <p>We like big books and we cannot lie!</p>
       <ul>
         <li>
           <Link to="/">Home</Link>
