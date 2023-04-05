@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Form, Input } from 'antd';
 const onFinish = (values) => {
   console.log('Success:', values);
 };
@@ -16,7 +16,7 @@ const ContactFormPage = () => (
     }}
     style={{
       maxWidth: '50%',
-      margin: '5% 15% 0 15%'
+      margin: '0 18% 0 18%'
     }}
     initialValues={{
       remember: true,
@@ -26,8 +26,8 @@ const ContactFormPage = () => (
     autoComplete="off"
   >
     <Form.Item
-      label="Username"
-      name="username"
+      label="Your name"
+      name="yourName"
       rules={[
         {
           required: true,
@@ -39,8 +39,8 @@ const ContactFormPage = () => (
     </Form.Item>
 
     <Form.Item
-      label="Password"
-      name="password"
+      label="Your e-mail address"
+      name="email"
       rules={[
         {
           required: true,
@@ -48,18 +48,32 @@ const ContactFormPage = () => (
         },
       ]}
     >
-      <Input.Password />
+      <Input />
     </Form.Item>
 
     <Form.Item
-      name="remember"
-      valuePropName="checked"
-      wrapperCol={{
-        offset: 8,
-        span: 16,
-      }}
+      label="Subject"
+      name="subject"
+      rules={[
+        {
+          required: true,
+          message: 'Please input your password!',
+        },
+      ]}
     >
-      <Checkbox>Remember me</Checkbox>
+      <Input />
+    </Form.Item>
+    <Form.Item
+      label="Message"
+      name="message"
+      rules={[
+        {
+          required: true,
+          message: 'Please input your password!',
+        },
+      ]}
+    >
+      <Input />
     </Form.Item>
 
     <Form.Item
@@ -69,7 +83,7 @@ const ContactFormPage = () => (
       }}
     >
       <Button type="primary" htmlType="submit">
-        Submit
+        Send Message
       </Button>
     </Form.Item>
   </Form>
