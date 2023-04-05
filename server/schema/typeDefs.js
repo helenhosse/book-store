@@ -58,6 +58,15 @@ const typeDefs = gql`
       email: String, 
       password: String
       ): User
+    addProduct(
+      title: String!
+      author: String!
+      firstSentence: String
+      image: String!
+      quantity: String
+      year: String!
+
+    ): Product
   }
 `;
 

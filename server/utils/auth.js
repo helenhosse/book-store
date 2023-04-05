@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const secret = process.env.JWT_SECRET;
+const secret = "Super secret secrete";
 const expiration = '4h';
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
         let token = req.body.token || req.query.token || req.headers.authorization;
 
         if (req.headers.authorization) {
-            token = token.splity(' ').pop().trim();
+            token = token.split(' ').pop().trim();
         }
 
         if (!token) {
