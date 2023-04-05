@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 const Order = require('./Order');
+const Product = require('./Product');
 
 const userSchema = new Schema({
     firstName: {
@@ -25,8 +26,21 @@ const userSchema = new Schema({
         required: true,
         minlength: 5
     },
-    orders: [Order.schema]
-});
+    
+   
+    Bookcard: [{
+      type: Schema.Types.ObjectId,
+      ref: 'Product',
+      
+    }],
+  },
+ 
+  {
+    toJSON: {
+      virtuals: true,
+    },
+  }
+);
 
 userSchema.pre('save', async function(next) {
     if (this.isNew || this.isModified('password')) {
