@@ -31,7 +31,7 @@ Links for resources:
 + https://openlibrary.org/ - for book search and book images
 
 Links and Contacts
-+ Git Hub Repo: https://github.com/teamirteklu/Algorhythyms-Project 
++ Git Hub Repo: https://github.com/helenhosse/book-store.git
 + Deployed Site: https://serene-escarpment-58173.herokuapp.com/
 + Helen: https://github.com/helenhosse
 + Sarah: https://github.com/sarnoire
