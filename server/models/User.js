@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
-const Order = require('./Order');
-const Product = require('./Product');
+
 
 const userSchema = new Schema({
     firstName: {
@@ -28,9 +27,9 @@ const userSchema = new Schema({
     },
     
    
-    Bookcard: [{
+    orders: [{
       type: Schema.Types.ObjectId,
-      ref: 'Product',
+      ref: 'Order',
       
     }],
   },
