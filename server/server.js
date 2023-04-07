@@ -17,7 +17,9 @@ const app = express();
 const server = new ApolloServer({
     typeDefs,
     resolvers,
-    context: authMiddleware
+    context: authMiddleware,
+    playground: true,
+    introspection: true
 });
 
 
@@ -34,7 +36,11 @@ app.use('/images', express.static(path.join(__dirname, '../client/src/images')))
 
 // Uncomment the following code once you have built the queries and mutations in the client folder
 
-app.get('/', (req, res) => {
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../client/build/index.html'));
+// });
+
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
@@ -45,13 +51,12 @@ async function startApolloServer(typeDefs, resolvers){
   await server.start()
   server.applyMiddleware({app})
   db.once('open', () => {
-    app.listen(PORT, () => {
+    app.listen(process.env.PORT || 3001, () => {
       console.log(`API server running on port ${PORT}!`);
       console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
     });
   });
 };
-
 
 startApolloServer(typeDefs, resolvers);
 

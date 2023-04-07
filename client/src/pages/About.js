@@ -2,7 +2,7 @@ import React from "react";
 
 const HomePage = () => {
   return (
-    <div style={{maxWidth: '100%', margin: '2%', textAlign: 'center'}}>
+    <div>
       <h2 className="subtitle">About</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
