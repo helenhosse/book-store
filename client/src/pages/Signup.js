@@ -9,6 +9,7 @@ import {Container, Row, Col, Form, Button} from "react-bootstrap";
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '', firstName: '', lastName: ''});
   const [addUser] = useMutation(ADD_USER);
+  // const [validated] = useState(false);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
@@ -50,7 +51,6 @@ function Signup(props) {
     });
   };
 
-
     //used react-bootstrap, feel free to change, just added the needed labels and handles
   // used from other challenge
 
@@ -60,7 +60,7 @@ function Signup(props) {
         <Row className="no-gutters">
           <Col lg={5} md={6} sm={12} className="p-5 m-auto">
           <h1 className="mt-5 mb-5 text-left rounded text-color">Signup</h1>
-            <form onSubmit={handleFormSubmit}>
+            <form noValidate onSubmit={handleFormSubmit}>
 
                 <Form.Group>
                   <Form.Label className="mb-2">First Name:</Form.Label>
