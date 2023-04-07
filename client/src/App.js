@@ -1,30 +1,27 @@
 import { Routes, Route } from 'react-router-dom';
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Events from "./pages/Events";
 import Shop from "./pages/Shop";
 import NavBar from './pages/NavBar';
+import './App.css';
 
 function App() {
-//   // const [activePage, setActivePage] = useState("Home");
+  // const [books] = useState([])
 
-//   // const displayPage = () => {
-//   //   // need to adjust for signup/login
-//   //   switch (activePage) {
-//   //     case "About":
-//   //       return <About />;
-//   //     case "Contact":
-//   //       return <Contact />;
-//   //     case "Events":
-//   //       return <Events />;
-//   //     case "Shop":
-//   //       return <Shop />;
-//   //     default:
-//   //       return <Home />;
-//   //   }
-//   };
+  // useEffect(() => {
+  //   fetchBooks();
+  // }, []);
+
+  // const fetchBooks = async () => {
+  //   const response = await fetch("http://openlibrary.org/search.json?q="+document.getElementById("input").value);
+  //   const data = await response.json();
+  //   setBooks(data);
+  // };
+
+ 
 
   return (
     <div className="App">
