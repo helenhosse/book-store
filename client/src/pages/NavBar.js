@@ -1,28 +1,160 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 
+import { CalendarOutlined, TeamOutlined, ShoppingCartOutlined, PhoneOutlined } from '@ant-design/icons';
+import { Input, Menu, Image,} from 'antd';
+import { useState } from 'react';
+import Logo from "../images/owlsch.png";
+import Auth from "../utils/auth";
+
+const hideUserConnect = () => {
+  if (Auth.login === true) {
+    document.querySelectorAll('loginBtn').style.display = 'none';
+    document.querySelectorAll('signupBtn').style.display = 'none';
+  } else {
+    document.querySelectorAll('logoutBtn').style = 'none';
+  }
+}
+
+const items = [
+  {
+    label: (
+      <a href="/" rel="noopener noreferrer">
+       📖 A Novel Idea
+      </a>
+      
+    ),
+    key: 'home',
+  },
+  {
+    label: (
+      <a href="/about" hover="none" rel="noopener noreferrer">
+        About Us
+      </a>
+    ),
+    key: 'about',
+    icon: <TeamOutlined />,
+  },
+  {
+    label: (
+      <a href="/events" rel="noopener noreferrer">
+        Events
+      </a>
+    ),
+    key: 'events',
+    icon: <CalendarOutlined />,
+  },
+  {
+    label: 'Shop',
+    key: 'shop',
+    icon: <ShoppingCartOutlined />,
+    children: [
+      {
+        type: 'group',
+        label: 'Shop',
+        children: [
+          {
+            label: (
+              <a href="/shop" rel="noopener noreferrer">
+                Go to Shop
+              </a>
+            )
+          },
+          {
+            label: (
+              <a /*href=""*/ rel="noopener noreferrer">
+                View Cart
+              </a>
+            ),
+            key: 'cart',
+            disabled: true,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: (
+      <a href="/contact" rel="noopener noreferrer">
+        Contact Us
+      </a>
+    ),
+    key: 'contact',
+    icon: <PhoneOutlined />
+  },
+  {
+    icon: <a href="/" rel="noopener noreferrer">
+      <Image
+    width={80}
+    src={Logo}
+  />
+  </a>
+  },
+  {
+    label: (<Input placeholder="Search for a book" />)
+  },
+  {
+    label: (
+      <a href="/login" id="loginBtn" target="_blank" rel="noopener noreferrer">
+        Login
+      </a>
+    ),
+    key: 'login'
+  },
+  {
+    label: (
+      <a href="/signup" id="signupBtn" target="_blank" rel="noopener noreferrer">
+        Signup
+      </a>
+    ),
+    key: 'signup',
+  },
+  {
+    label: (
+      <button id="logoutBtn" onClick={Auth.logout}>Logout</button>
+    ),
+    key: 'logout',
+  }
+  
+]
+;
+{/* <Input placeholder="Basic usage" /> */}
+const onSearch = (value) => console.log(value);
 const NavBar = () => {
-  return (
-    <nav className='navbar'>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/contact">Events</Link>
-        </li>
-        <li>
-          <Link to="/shop">Shop</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-      </ul>
-    </nav>
-  );
+  
+  const [current, setCurrent] = useState('');
+  const onClick = (e) => {
+    // console.log('click ', e);
+    setCurrent(e.key);
+  };
+  return <Menu style={{ width: '100%', justifyContent: 'center' }} onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />;
 };
-
+hideUserConnect();
 export default NavBar;
+
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+
+// const NavBar = () => {
+//   return (
+//     <nav className='navbar'>
+//       <ul>
+//         <li>
+//           <Link to="/">Home</Link>
+//         </li>
+//         <li>
+//           <Link to="/about">About</Link>
+//         </li>
+//         <li>
+//           <Link to="/contact">Events</Link>
+//         </li>
+//         <li>
+//           <Link to="/shop">Shop</Link>
+//         </li>
+//         <li>
+//           <Link to="/contact">Contact</Link>
+//         </li>
+//       </ul>
+//     </nav>
+//   );
+// };
+
+// export default NavBar;
